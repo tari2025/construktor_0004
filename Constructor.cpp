@@ -36,17 +36,59 @@ private:
     string levelAkses;
 
 public:
-    Petugas(string n, string id, string akses) : nama(n), idPetugas(id), levelAkses(akses) {}
-    void prosesPinjam(Buku &b, Peminjam *p)
+    void prosesPinjam(Buku &b, Peminjam *p string);
+};
+{
+    if (!b.dipinjam)
     {
-        if (!b.dipinjam)
-        {
-            b.dipinjam = true;
-            p->totalPinjaman++;
-            cout << "Buku '" << b.judul << "' berhasil dipinjam oleh " << p->nama << endl;
-        }
-        else
-        {
-            cout << "Buku '" << b.judul << "' sudah dipinjam." << endl;
-        }
+        b.dipinjam = true;
+        p->totalPinjaman++;
+        cout << "Buku '" << b.judul << "' berhasil dipinjam oleh " << p->nama << endl;
     }
+    else
+    {
+        cout << "Buku '" << b.judul << "' sudah dipinjam." << endl;
+    }
+}
+void prosesKembali(Buku &b)
+{
+    if (b.dipinjam)
+    {
+        b.dipinjam = false;
+        cout << "Buku '" << b.judul << "' berhasil dikembalikan." << endl;
+    }
+    else
+    {
+        cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
+    }
+}
+}
+;
+void prosesKembali(Buku &b)
+{
+    if (b.dipinjam)
+    {
+        b.dipinjam = false;
+        cout << "Buku '" << b.judul << "' berhasil dikembalikan." << endl;
+    }
+    else
+    {
+        cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
+    }
+}
+}
+;
+void prosesKembali(Buku &b)
+{
+    if (b.dipinjam)
+    {
+        b.dipinjam = false;
+        cout << "Buku '" << b.judul << "' berhasil dikembalikan." << endl;
+    }
+    else
+    {
+        cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
+    }
+}
+}
+;
