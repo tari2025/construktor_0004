@@ -96,3 +96,4 @@ void prosesKembali(Buku &b)
     }
     int main()
     {
+        Buku buku1("Belajar matematika", "J.K. Rowling");
