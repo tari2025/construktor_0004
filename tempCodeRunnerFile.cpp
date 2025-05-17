@@ -1,17 +1,15 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-class Buku
-{
+class Buku {
 private:
     string judul;
     string penulis;
-    string peminjam;
     bool dipinjam;
 
 public:
     Buku(string j, string p) : judul(j), penulis(p), dipinjam(false) {}
-    friend void prosesPinjam(Buku &b, string);
-    friend void prosesKembali(Buku &b);
+
+    friend void prosesPinjam(Buku& b, Peminjam* p);
+    friend void prosesKembali(Buku& b);
 };
