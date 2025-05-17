@@ -105,3 +105,6 @@ void prosesKembali(Buku &b)
         petugas1.prosesPinjam(buku1, &peminjam1);
         admin1.lihatStatistik(&peminjam1);
         petugas1.prosesKembali(buku1);
+
+        return 0;
+    }
