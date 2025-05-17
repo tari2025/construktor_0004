@@ -16,3 +16,5 @@ public:
         return this->judul;
     }
 } bukunya;
+
+int main()
