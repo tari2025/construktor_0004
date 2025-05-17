@@ -21,3 +21,10 @@ private:
     string nama;
     string id;
     int totalPinjaman;
+
+public:
+    Peminjam(string n, string i) : nama(n), id(i), totalPinjaman(0) {}
+
+    friend void prosesPinjam(Buku &b, Peminjam *p);
+    friend void prosesKembali(Buku &b);
+};
