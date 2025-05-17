@@ -15,3 +15,9 @@ public:
     friend void prosesPinjam(Buku &b, string);
     friend void prosesKembali(Buku &b);
 };
+class Peminjam
+{
+private:
+    string nama;
+    string id;
+    int totalPinjaman;
