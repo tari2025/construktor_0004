@@ -38,17 +38,16 @@ private:
 public:
     void prosesPinjam(Buku &b, Peminjam *p string);
 };
+if (!b.dipinjam)
 {
-    if (!b.dipinjam)
-    {
-        b.dipinjam = true;
-        p->totalPinjaman++;
-        cout << "Buku '" << b.judul << "' berhasil dipinjam oleh " << p->nama << endl;
-    }
-    else
-    {
-        cout << "Buku '" << b.judul << "' sudah dipinjam." << endl;
-    }
+    b.dipinjam = true;
+    p->totalPinjaman++;
+    cout << "Buku '" << b.judul << "' berhasil dipinjam oleh " << p->nama << endl;
+}
+else
+{
+    cout << "Buku '" << b.judul << "' sudah dipinjam." << endl;
+}
 }
 void prosesKembali(Buku &b)
 {
@@ -75,9 +74,7 @@ void prosesKembali(Buku &b)
     {
         cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
     }
-}
-}
-;
+};
 void prosesKembali(Buku &b)
 {
     if (b.dipinjam)
@@ -89,6 +86,16 @@ void prosesKembali(Buku &b)
     {
         cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
     }
-}
-}
-;
+};
+class Admin
+{
+private:
+    string nama;
+
+public:
+    Admin(string n) : nama(n) {}
+    void lihatStatistik(Peminjam *p)
+    {
+        cout << "Total pinjaman " << p->nama << ": " << p->totalPinjaman << endl;
+    }
+};
