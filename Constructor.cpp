@@ -20,7 +20,7 @@ class Peminjam
 private:
     string nama;
     string id;
-    int totalPinjaman;
+    string totalPinjaman;
 
 public:
     Peminjam(string n, string i) : nama(n), id(i), totalPinjaman(0) {}
@@ -59,40 +59,36 @@ void prosesKembali(Buku &b)
     else
     {
         cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
-    }
-}
-}
-}
-;
-void prosesKembali(Buku &b)
-{
-    if (b.dipinjam)
+    };
+    void prosesKembali(Buku & b)
     {
-        b.dipinjam = false;
-        cout << "Buku '" << b.judul << "' berhasil dikembalikan." << endl;
-    }
-    else
+        if (b.dipinjam)
+        {
+            b.dipinjam = false;
+            cout << "Buku '" << b.judul << "' berhasil dikembalikan." << endl;
+        }
+        else
+        {
+            cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
+        }
+    };
+    class Admin
     {
-        cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
-    }
-};
-class Admin
-{
-private:
-    string nama;
+    private:
+        string nama;
 
-public:
-    Admin(string n) : nama(n) {}
-    void lihatStatistik(Peminjam *p)
+    public:
+        Admin(string n) : nama(n) {}
+        void lihatStatistik(Peminjam *p)
+        {
+            cout << "Total pinjaman " << p->nama << ": " << p->TotalPinjaman << endl;
+        }
+    };
+    void prosesPinjam(Buku & b, Peminjam * p)
     {
-        cout << "Total pinjaman " << p->nama << ": " << p->TotalPinjaman << endl;
+        // Logic untuk proses pinjam
     }
-};
-void prosesPinjam(Buku &b, Peminjam *p)
-{
-    // Logic untuk proses pinjam
-}
-void prosesKembali(Buku &b)
-{
-    // Logic untuk proses kembali
-}
+    void prosesKembali(Buku & b)
+    {
+        // Logic untuk proses kembali
+    }
