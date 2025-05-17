@@ -103,3 +103,5 @@ void prosesKembali(Buku &b)
 
         // Contoh penggunaan
         petugas1.prosesPinjam(buku1, &peminjam1);
+        admin1.lihatStatistik(&peminjam1);
+        petugas1.prosesKembali(buku1);
