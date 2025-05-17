@@ -102,3 +102,8 @@ public:
 void prosesPinjam(Buku &b, Peminjam *p)
 {
     // Logic untuk proses pinjam
+}
+void prosesKembali(Buku &b)
+{
+    // Logic untuk proses kembali
+}
