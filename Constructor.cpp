@@ -28,3 +28,9 @@ public:
     friend void prosesPinjam(Buku &b, Peminjam *p);
     friend void prosesKembali(Buku &b);
 };
+class Petugas
+{
+private:
+    string nama;
+    string idPetugas;
+    string levelAkses;
