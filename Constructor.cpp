@@ -99,3 +99,7 @@ void prosesKembali(Buku &b)
         Buku buku1("Belajar matematika", "J.K. Rowling");
         Peminjam peminjam1("alam", "P123");
         Petugas petugas1("Budi", "T001", "Admin");
+        Admin admin1("Dewik");
+
+        // Contoh penggunaan
+        petugas1.prosesPinjam(buku1, &peminjam1);
