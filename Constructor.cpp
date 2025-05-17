@@ -34,3 +34,19 @@ private:
     string nama;
     string idPetugas;
     string levelAkses;
+
+public:
+    Petugas(string n, string id, string akses) : nama(n), idPetugas(id), levelAkses(akses) {}
+    void prosesPinjam(Buku &b, Peminjam *p)
+    {
+        if (!b.dipinjam)
+        {
+            b.dipinjam = true;
+            p->totalPinjaman++;
+            cout << "Buku '" << b.judul << "' berhasil dipinjam oleh " << p->nama << endl;
+        }
+        else
+        {
+            cout << "Buku '" << b.judul << "' sudah dipinjam." << endl;
+        }
+    }
