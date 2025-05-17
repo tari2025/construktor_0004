@@ -36,7 +36,7 @@ private:
     string levelAkses;
 
 public:
-    void prosesPinjam(Buku &b, Peminjam *p string);
+    void prosesPinjam(Buku &b, Peminjam *p);
 };
 if (!b.dipinjam)
 {
@@ -62,19 +62,8 @@ void prosesKembali(Buku &b)
     }
 }
 }
+}
 ;
-void prosesKembali(Buku &b)
-{
-    if (b.dipinjam)
-    {
-        b.dipinjam = false;
-        cout << "Buku '" << b.judul << "' berhasil dikembalikan." << endl;
-    }
-    else
-    {
-        cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
-    }
-};
 void prosesKembali(Buku &b)
 {
     if (b.dipinjam)
