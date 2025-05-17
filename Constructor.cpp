@@ -20,7 +20,7 @@ class Peminjam
 private:
     string nama;
     string id;
-    string totalPinjaman;
+    int totalPinjaman;
 
 public:
     Peminjam(string n, string i) : nama(n), id(i), totalPinjaman(0) {}
@@ -59,7 +59,9 @@ void prosesKembali(Buku &b)
     else
     {
         cout << "Buku '" << b.judul << "' tidak sedang dipinjam." << endl;
-    };
+    }
+
+    ;
     void prosesKembali(Buku & b)
     {
         if (b.dipinjam)
@@ -92,3 +94,5 @@ void prosesKembali(Buku &b)
     {
         // Logic untuk proses kembali
     }
+    int main()
+    {
