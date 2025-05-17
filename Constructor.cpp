@@ -96,6 +96,9 @@ public:
     Admin(string n) : nama(n) {}
     void lihatStatistik(Peminjam *p)
     {
-        cout << "Total pinjaman " << p->nama << ": " << p->totalPinjaman << endl;
+        cout << "Total pinjaman " << p->nama << ": " << p->TotalPinjaman << endl;
     }
 };
+void prosesPinjam(Buku &b, Peminjam *p)
+{
+    // Logic untuk proses pinjam
