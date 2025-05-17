@@ -10,3 +10,9 @@ public:
         this->judul = judul;
         return *this; // chain fuction
     }
+    string getjudul()
+    {
+
+        return this->judul;
+    }
+}
